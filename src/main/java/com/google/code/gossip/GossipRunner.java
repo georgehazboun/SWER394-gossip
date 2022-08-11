@@ -30,7 +30,8 @@ public class GossipRunner {
     if (args.length == 1) {
       configFile = new File("./" + args[0]);
     } else {
-      configFile = new File("gossip.conf");
+      // configFile = new File("gossip.conf");
+      configFile = new File("src\\main\\resources\\gossip.conf");
     }
     new GossipRunner(configFile);
   }
@@ -54,7 +55,8 @@ public class GossipRunner {
       }
     } else {
       System.out
-              .println("The gossip.conf file is not found.\n\nEither specify the path to the startup settings file or place the gossip.json file in the same folder as the JAR file.");
+          .println(
+              "The gossip.conf file is not found.\n\nEither specify the path to the startup settings file or place the gossip.json file in the same folder as the JAR file.");
     }
   }
 }
